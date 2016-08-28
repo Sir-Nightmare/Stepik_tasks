@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 inline int triNum(long long input) {
     int n = 1;
     int triangleNumber = 0;
