@@ -1,19 +1,20 @@
 #include <iostream>
+#include <math.h>
+#include <stdio.h>
 
-inline int triNum(long long input) {
-    int n = 1;
-    int triangleNumber = 0;
-    while (triangleNumber < input) {
-        triangleNumber = n * (n + 1) / 2;
-        if (triangleNumber == input) {
-            return n;
-        }
-        n++;
+using namespace std;
+
+long long triNum(long long input) {
+    long long n = llround(sqrt(input) * sqrt(2));
+    if (n * (n + 1) / 2 == input) {
+        return n;
+    } else if (n * (n - 1) / 2 == input) {
+        return n - 1;
     }
     return 0;
 }
 
-int foo() {
+long long int foo() {
     long long input = 0;
     int is_double = 0;
     if (scanf("%llu.%d", &input, &is_double) == 1) {
@@ -26,6 +27,6 @@ int foo() {
 
 
 int main() {
-    printf("%d", foo());
+    printf("%lli", foo());
     return 0;
 }
