@@ -1,32 +1,23 @@
 #include <iostream>
 #include <math.h>
-#include <stdio.h>
 
-using namespace std;
 
-long long triNum(long long input) {
-    long long n = llround(sqrt(input) * sqrt(2));
-    if (n * (n + 1) / 2 == input) {
-        return n;
-    } else if (n * (n - 1) / 2 == input) {
-        return n - 1;
-    }
-    return 0;
-}
-
-long long int foo() {
-    long long input = 0;
-    int is_double = 0;
-    if (scanf("%llu.%d", &input, &is_double) == 1) {
-        if (input > 0) {
-            return triNum(input);
-        }
-    }
-    return 0;
-}
-
+//void changeMaxToSum(int a[], unsigned size) {
+//
+//}
+//
+//void print(int a[], int size) {
+//    for (int i = 0; i < size; i++) {
+//        std::cout << a[i] << ' ';
+//    }
+//    std::cout << std::endl;
+//}
 
 int main() {
-    printf("%lli", foo());
+//    int a[] = {1, 2, 3, 4, 5};
+//    int size = sizeof(a) / sizeof(int);
+//    changeMaxToSum(a, size);
+//    print(a, size);
+    std::cout << abs(-9);
     return 0;
 }
