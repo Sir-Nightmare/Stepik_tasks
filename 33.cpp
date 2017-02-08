@@ -15,7 +15,7 @@ int operator==(cell a, cell b) {
 
 
 int canGo(cell c) {
-    return (c.x > 0) && (c.x < 8) && (c.y > 0) && (c.y < 8);
+    return (c.x > 0) && (c.x < 9) && (c.y > 0) && (c.y < 9);
 }
 
 bool notVisited(cell temp, vector<cell> &visited) {
@@ -55,7 +55,7 @@ int doEverything(vector<cell> &cellVec, vector<cell> &visited, cell lastCell) {
 
 int main() {
     cell firstCell = {1, 2};
-    cell lastCell = {2, 3};
+    cell lastCell = {8,  8};
     vector<cell> cellVec{firstCell};
     vector<cell> visited{firstCell};
     cout << doEverything(cellVec, visited, lastCell);
